@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrongChile - Bobinas y Conductores</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+
+    <header id="inicio" class="relative h-screen bg-cover bg-center" style="background-image: url('https://i.ibb.co/TDqNN7XF/portada.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <nav id="navbar" class="absolute top-0 left-0 right-0 z-30 transition-all duration-300">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex-shrink-0"><a href="#inicio" class="text-white text-xl font-bold"><img src="https://i.ibb.co/ccmPw3jP/logo2.png" alt="Logo StrongChile" class="h-16 md:h-20"></a></div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#inicio" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Inicio</a>
+                        <a href="#nosotros" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Nosotros</a>
+                        <a href="#servicios" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Servicios</a>
+                        <a href="#procesos" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Procesos</a>
+                        <a href="#contacto" class="text-white hover:text-yellow-400 transition-colors duration-300 font-medium">Contacto</a>
+                        <a href="#contacto" class="bg-yellow-400 text-black font-bold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors duration-300">Cotiza</a>
+                    </div>
+                    <div class="md:hidden"><button id="mobile-menu-button" class="text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
+                <a href="#inicio" class="block text-white text-center py-3 px-4 text-sm hover:bg-yellow-400 hover:text-black">Inicio</a>
+                <a href="#nosotros" class="block text-white text-center py-3 px-4 text-sm hover:bg-yellow-400 hover:text-black">Nosotros</a>
+                <a href="#servicios" class="block text-white text-center py-3 px-4 text-sm hover:bg-yellow-400 hover:text-black">Servicios</a>
+                <a href="#procesos" class="block text-white text-center py-3 px-4 text-sm hover:bg-yellow-400 hover:text-black">Procesos</a>
+                <a href="#contacto" class="block text-white text-center py-3 px-4 text-sm hover:bg-yellow-400 hover:text-black">Contacto</a>
+                <a href="#contacto" class="block bg-yellow-400 text-black text-center font-bold py-3 px-4 text-sm hover:bg-yellow-500">Cotiza</a>
+            </div>
+        </nav>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+            <div class="max-w-4xl">
+                <p class="text-yellow-400 font-black text-lg md:text-2xl uppercase tracking-widest text-shadow mb-4">Somos StrongChile</p>
+                <h1 class="text-white font-black text-4xl sm:text-5xl md:text-7xl leading-tight text-shadow">Líderes en Bobinas y Conductores Eléctricos</h1>
+                <p class="text-gray-200 text-lg md:text-xl mt-6 max-w-2xl mx-auto text-shadow">Soluciones de alta calidad y confianza para tus proyectos más exigentes.</p>
+                <div class="mt-12"><a href="#servicios" class="bg-yellow-400 text-black font-bold py-4 px-8 rounded-lg text-lg hover:bg-yellow-500 transition-colors duration-300 transform hover:scale-105 inline-block">Ver Nuestros Servicios</a></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="nosotros" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-800 uppercase">Nuestra <span class="text-yellow-500">Empresa</span></h2>
+                    <p class="mt-2 text-xl font-semibold text-gray-600">ESPECIALISTAS EN SOLUCIONES ELÉCTRICAS</p>
+                    <div class="w-24 h-1 bg-yellow-400 mx-auto md:mx-0 mt-4 mb-6"></div>
+                    <p class="text-gray-600 leading-relaxed mb-4">STRONGCHILE S.A. es una empresa de fabricación de dos tipos de productos: <strong>Conductores de Cobre sección Rectangular</strong> y <strong>Bobinas Preformadas</strong> para alta, media y baja tensión de CA y CC, tanto a nivel nacional como internacional.</p>
+                    <p class="text-gray-600 leading-relaxed">En nuestras instalaciones, ubicadas en Quilicura, se puede apreciar cada proceso de fabricación, comercialización, almacenamiento y despacho para ofrecer un resultado óptimo que refleje nuestro sistema de gestión de la calidad.</p>
+                    <a href="#contacto" class="mt-8 inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 hover:text-yellow-400 transition-all duration-300">Contáctanos</a>
+                </div>
+                <div class="md:w-1/2"><img src="https://i.ibb.co/vvBcJgtc/1.jpg" alt="Imagen de bobinas de cobre de alta calidad" class="rounded-xl shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="servicios" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-800 uppercase">Nuestros <span class="text-yellow-500">Servicios</span></h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Productos de alta ingeniería para satisfacer las demandas más exigentes de la industria.</p>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
+            </div>
+            <div class="space-y-20">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div class="md:w-1/2"><img src="https://i.ibb.co/RTzspRjr/2.jpg" alt="Imagen de Pletina de Cobre" class="rounded-xl shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"></div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Pletina de Cobre</h3>
+                        <p class="mt-2 text-gray-600">Ofrecemos pletinas forradas con traslape de 0%, 33%, 50% y 66%, además de pletinas de cobre desnudas y recocidas.</p>
+                        <ul class="mt-6 space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Forrado con <strong>Kapton 150FN</strong> y <strong>Vidrio Daglass</strong>.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Forrado con <strong>papel Kraft</strong> (Isokraft paper 3688).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Forrado con <strong>papel Nomex</strong> (T-410).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Forrado con <strong>Conductofol</strong> 10mm/15mm.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Esmaltado <strong>ME27</strong>.</span></li>
+                        </ul>
+                        <a href="https://wa.me/56992309464?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20o%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20Pletina%20de%20Cobre." target="_blank" class="mt-8 inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 hover:text-yellow-400 transition-all duration-300">Cotizar Pletinas de Cobre</a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-16">
+                    <div class="md:w-1/2"><img src="https://i.ibb.co/Dgr58vqQ/2-1.jpg" alt="Imagen de Bobinas Preformadas" class="rounded-xl shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"></div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Bobinas Preformadas</h3>
+                        <p class="mt-2 text-gray-600">Fabricamos una amplia gama de bobinas a medida para diversas aplicaciones industriales y de alta exigencia.</p>
+                        <ul class="mt-6 space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Bobinas de <strong>armadura, estator y campo</strong>.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Bobinas para <strong>transformadores y hornos de inducción</strong>.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Bobinados de <strong>polos de molinos y agitadores</strong>.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Bobinas para <strong>anillos rozantes</strong> y <strong>especiales</strong>.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span><strong>Equipotenciales</strong> (ecualizadores).</span></li>
+                        </ul>
+                        <a href="https://wa.me/56992309464?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20o%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio%20de%20Bobinas%20Preformadas." target="_blank" class="mt-8 inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 hover:text-yellow-400 transition-all duration-300">Cotizar Bobinas Preformadas</a>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div class="md:w-1/2"><img src="https://i.ibb.co/JjPw5vL9/3.jpg" alt="Imagen de Aislantes Eléctricos" class="rounded-xl shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"></div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Aislantes Eléctricos</h3>
+                        <p class="mt-2 text-gray-600">Comercializamos una variada selección de cintas y materiales aislantes para garantizar la seguridad y eficiencia de sus componentes.</p>
+                        <ul class="mt-6 space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Cintas de <strong>Kapton 150 FN</strong> (con y sin adhesivo).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Cintas de <strong>Fibra de Vidrio</strong> tejido (con y sin adhesivo).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Cintas de <strong>Mica Glasscloth+2PET</strong> y <strong>Conductofol 2009</strong>.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Papel <strong>IsoKraft</strong> y <strong>Nomex T-410</strong>.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-3"></i><span>Planchas de <strong>Fibra de vidrio G11</strong>.</span></li>
+                        </ul>
+                        <a href="https://wa.me/56992309464?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20o%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Aislantes%20El%C3%A9ctricos." target="_blank" class="mt-8 inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-900 hover:text-yellow-400 transition-all duration-300">Consultar por Aislantes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="procesos" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-800 uppercase">Nuestros <span class="text-yellow-500">Procesos</span></h2>
+                <p class="mt-2 text-lg text-gray-600 max-w-2xl mx-auto">Tecnología y precisión en cada etapa de la fabricación para asegurar la máxima calidad.</p>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/gMSz2GnM/4.jpg" alt="Imagen de Procesos Productivos Área de Pletinas" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">ÁREA DE PLETINAS</h3><p class="text-gray-600 text-sm">Procesos optimizados para la producción de pletinas de cobre de alta conductividad y especificaciones precisas.</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/35pdHcgT/5.jpg" alt="Imagen del proceso de Trefilación" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">TREFILACIÓN</h3><p class="text-gray-600 text-sm">Etapa de estirado del cobre para obtener la sección y dimensiones exactas requeridas por nuestros clientes.</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/Wvf0LQNZ/6.jpg" alt="Imagen del proceso de Laminación" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">LAMINACIÓN</h3><p class="text-gray-600 text-sm">El alambrón pasa por un tren de laminación para obtener el conductor de sección rectangular del calibre deseado.</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/Wvf0LQNZ/6.jpg" alt="Imagen del proceso de Recocido" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">RECOCIDO</h3><p class="text-gray-600 text-sm">Se somete al alambrón a un proceso térmico en horno eléctrico para suavizar el material y modificar sus propiedades.</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/Y7kvjKj9/7.jpg" alt="Imagen del proceso de Esmaltado" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">ESMALTADO</h3><p class="text-gray-600 text-sm">Tratamiento de esmaltado para garantizar los niveles de aislamiento requeridos (clase térmica "H").</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/NnNdvyth/8.jpg" alt="Imagen del proceso de Forrado" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">FORRADO</h3><p class="text-gray-600 text-sm">Aislamos los conductores con diversas cintas (Kapton, Nomex, Kraft, etc.) según los requerimientos de cada equipo.</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/NnNdvyth/8.jpg" alt="Imagen de la confección de bobinas" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">BOBINAS</h3><p class="text-gray-600 text-sm">Desarrollo de prototipos y confección de pedidos con maquinaria neumática para fabricar bobinas de hasta 2.4 mts.</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/GQLNpxZj/9.jpg" alt="Imagen del proceso de Encintado" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">ENCINTADO</h3><p class="text-gray-600 text-sm">Recubrimiento total de la bobina, impregnación de barniz y tratado de horno con temperatura controlada.</p></div></div>
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300"><img src="https://i.ibb.co/xqXQr4WW/10.jpg" alt="Imagen de ensayos de laboratorio" class="w-full h-56 object-cover"><div class="p-6 text-center"><h3 class="text-xl font-bold text-yellow-600 bg-gray-800 -mt-12 mb-4 inline-block px-4 py-2 rounded">ENSAYOS</h3><p class="text-gray-600 text-sm">Control de calidad intensivo con ensayos de rigidez dieléctrica, resistencia, índice de polarización, surge y Hi-Pot.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="relative bg-cover bg-center py-16 md:py-24" style="background-image: url('https://i.ibb.co/k640v9b1/11.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase text-shadow">¡Ponte en <span class="text-yellow-400">Contacto</span>!</h2>
+                <p class="mt-2 text-lg text-gray-300 max-w-2xl mx-auto">Estamos listos para ayudarte con tu próximo proyecto. ¡Hablemos!</p>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
+            </div>
+            <div class="bg-white bg-opacity-90 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start"><i class="fas fa-map-marker-alt text-yellow-500 text-2xl mt-1 w-8 text-center"></i><div><h4 class="font-bold text-gray-700">Dirección</h4><p class="text-gray-600">Avenida Presidente Eduardo Frei Montalva 9550A, Quilicura, Santiago</p></div></div>
+                            <div class="flex items-start"><i class="fas fa-envelope text-yellow-500 text-2xl mt-1 w-8 text-center"></i><div><h4 class="font-bold text-gray-700">Correo Electrónico</h4><a href="mailto:contacto@strongchile.cl" class="text-gray-600 hover:text-yellow-600 transition-colors">contacto@strongchile.cl</a></div></div>
+                            <div class="flex items-start"><i class="fas fa-phone-alt text-yellow-500 text-2xl mt-1 w-8 text-center"></i><div><h4 class="font-bold text-gray-700">Teléfono</h4><a href="tel:+56992309464" class="text-gray-600 hover:text-yellow-600 transition-colors">+56 9 9230 9464</a></div></div>
+                        </div>
+                        <div class="mt-8 rounded-lg overflow-hidden shadow-lg"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.257627057881!2d-70.73033582498205!3d-33.36425119280918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c724b9148301%3A0x8542f7065f5733eb!2sAv.%20Presidente%20Eduardo%20Frei%20Montalva%209550%2C%20Quilicura%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1719353147133!5m2!1ses-419!2scl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+                    <div class="md:w-1/2">
+                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Envíanos un Mensaje</h3>
+                         <form action="#" method="POST">
+                             <div class="space-y-4">
+                                 <div><label for="name" class="font-medium text-gray-700">Nombre Completo</label><input type="text" id="name" name="name" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500 transition"></div>
+                                 <div><label for="email" class="font-medium text-gray-700">Correo Electrónico</label><input type="email" id="email" name="email" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500 transition"></div>
+                                 <div><label for="phone" class="font-medium text-gray-700">Teléfono (Opcional)</label><input type="tel" id="phone" name="phone" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500 transition"></div>
+                                 <div><label for="message" class="font-medium text-gray-700">Mensaje</label><textarea id="message" name="message" rows="4" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500 transition"></textarea></div>
+                                 <div><button type="submit" class="w-full bg-yellow-400 text-black font-bold py-3 px-6 rounded-lg hover:bg-yellow-500 transition-colors duration-300 text-lg">Enviar Mensaje</button></div>
+                             </div>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto py-12 px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <div class="flex-shrink-0">
+                    <a href="#inicio"><img src="https://i.ibb.co/ccmPw3jP/logo2.png" alt="Logo StrongChile" class="h-16 mx-auto md:mx-0"></a>
+                    <p class="mt-4 text-sm text-gray-400">© 2025 StrongChile. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                    <div>
+                        <h4 class="font-bold uppercase text-yellow-400 mb-3">Navegación</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#nosotros" class="text-gray-300 hover:text-white transition">Nosotros</a></li>
+                            <li><a href="#servicios" class="text-gray-300 hover:text-white transition">Servicios</a></li>
+                            <li><a href="#procesos" class="text-gray-300 hover:text-white transition">Procesos</a></li>
+                            <li><a href="#contacto" class="text-gray-300 hover:text-white transition">Contacto</a></li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4 class="font-bold uppercase text-yellow-400 mb-3">Servicios</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#servicios" class="text-gray-300 hover:text-white transition">Pletina de Cobre</a></li>
+                            <li><a href="#servicios" class="text-gray-300 hover:text-white transition">Bobinas Preformadas</a></li>
+                            <li><a href="#servicios" class="text-gray-300 hover:text-white transition">Aislantes Eléctricos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                     <h4 class="font-bold uppercase text-yellow-400 mb-3">Contáctanos</h4>
+                     <ul class="space-y-3">
+                         <li class="flex items-center justify-center md:justify-start"><i class="fas fa-envelope mr-3 text-yellow-400"></i><a href="mailto:contacto@strongchile.cl" class="text-gray-300 hover:text-white transition">contacto@strongchile.cl</a></li>
+                         <li class="flex items-center justify-center md:justify-start"><i class="fas fa-phone-alt mr-3 text-yellow-400"></i><a href="tel:+56992309464" class="text-gray-300 hover:text-white transition">+56 9 9230 9464</a></li>
+                         <li class="flex items-center justify-center md:justify-start"><i class="fab fa-whatsapp mr-3 text-yellow-400 text-lg"></i><a href="https://wa.me/56992309464" target="_blank" class="text-gray-300 hover:text-white transition">WhatsApp</a></li>
+                     </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-4">
+        <a href="https://wa.me/56992309464?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
+            <i class="fab fa-whatsapp text-4xl"></i>
+        </a>
+        <button id="scrollTopBtn" class="hidden opacity-0 bg-yellow-400 text-black w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300">
+            <i class="fas fa-arrow-up text-2xl"></i>
+        </button>
+    </div>
+
+    <script src="./assets/js/script.js" defer></script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* style.css */
+
+/*
+  Este archivo contiene estilos CSS personalizados y básicos.
+  La mayor parte del diseño del sitio se realiza utilizando clases de Tailwind CSS
+  directamente en el archivo index.html.
+*/
+
+/* Estilo base para todo el cuerpo del documento.
+*/
+body {
+  /* Define la fuente principal del sitio web como "Inter", con una fuente genérica sans-serif como respaldo. */
+  font-family: 'Inter', sans-serif;
+  
+  /* Habilita el desplazamiento (scroll) suave al hacer clic en enlaces internos (ej: #contacto). */
+  scroll-behavior: smooth;
+}
+
+/* Clase de utilidad para agregar una sombra al texto.
+  Esto mejora la legibilidad del texto cuando se coloca sobre imágenes de fondo complejas.
+*/
+.text-shadow {
+  /* Aplica una sombra negra con un ligero desenfoque y desplazamiento. */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
