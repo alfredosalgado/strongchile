@@ -39,45 +39,90 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- LÓGICA DEL FORMULARIO DE CONTACTO (SIMULACIÓN) ---
-
-  // 1. Obtenemos la referencia al formulario dentro de la sección de contacto.
-  const contactForm = document.querySelector('#contacto form');
+  // --- FUNCIÓN PARA MOSTRAR MENSAJES (SISTEMA ORIGINAL) ---
   
-  if (contactForm) {
-    // 2. Agregamos un "escuchador de eventos" que se activa cuando el formulario intenta ser enviado.
-    contactForm.addEventListener('submit', (e) => {
-      // 3. Prevenimos el comportamiento por defecto del formulario (que es recargar la página).
-      e.preventDefault(); 
+  const showMessage = (message, type) => {
+    const messageBox = document.createElement('div');
+    // Se aplican estilos directamente para crear una notificación flotante.
+    messageBox.style.position = 'fixed';
+    messageBox.style.top = '20px';
+    messageBox.style.left = '50%';
+    messageBox.style.transform = 'translateX(-50%)';
+    messageBox.style.padding = '16px';
+    messageBox.style.color = 'white';
+    messageBox.style.borderRadius = '8px';
+    messageBox.style.zIndex = '1000';
+    messageBox.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+    messageBox.style.maxWidth = '90%';
+    messageBox.style.textAlign = 'center';
+    
+    // Color según el tipo de mensaje
+    if (type === 'success') {
+      messageBox.style.backgroundColor = '#28a745'; // Verde de éxito
+    } else if (type === 'error') {
+      messageBox.style.backgroundColor = '#dc3545'; // Rojo de error
+    }
+    
+    messageBox.textContent = message;
+    document.body.appendChild(messageBox);
+    
+    // La notificación desaparece después de 4 segundos.
+    setTimeout(() => {
+      if (document.body.contains(messageBox)) {
+        document.body.removeChild(messageBox);
+      }
+    }, 4000);
+  };
+
+  // --- LÓGICA DEL FORMULARIO DE CONTACTO CON AJAX ---
+
+  const form = document.getElementById('formContacto');
+
+  if (form) {
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(form);
       
-      // 4. Se crea una función para mostrar un mensaje de éxito personalizado y estilizado.
-      const showMessage = (message) => {
-          const messageBox = document.createElement('div');
-          // Se aplican estilos directamente para crear una notificación flotante.
-          messageBox.style.position = 'fixed';
-          messageBox.style.top = '20px';
-          messageBox.style.left = '50%';
-          messageBox.style.transform = 'translateX(-50%)';
-          messageBox.style.padding = '16px';
-          messageBox.style.backgroundColor = '#28a745'; // Color verde de éxito
-          messageBox.style.color = 'white';
-          messageBox.style.borderRadius = '8px';
-          messageBox.style.zIndex = '1000';
-          messageBox.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
-          messageBox.textContent = message;
-          document.body.appendChild(messageBox);
-          
-          // La notificación desaparece después de 3 segundos.
-          setTimeout(() => {
-              document.body.removeChild(messageBox);
-          }, 3000);
-      };
+      try {
+        const res = await fetch('enviar.php', { method: 'POST', body: data });
+        const text = await res.text();
+        
+        if (text.trim() === 'Mensaje enviado correctamente.') {
+          showMessage('¡Gracias por tu mensaje! Formulario enviado con éxito.', 'success');
+          form.reset();
+        } else {
+          showMessage(text, 'error');
+        }
+      } catch (err) {
+        console.error(err);
+        showMessage('Error en la petición. Por favor, intenta nuevamente.', 'error');
+      }
+    });
+  }
+
+  // --- LÓGICA DEL FORMULARIO DE FICHA TÉCNICA CON AJAX ---
+
+  const formFicha = document.getElementById('formFicha');
+
+  if (formFicha) {
+    formFicha.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(formFicha);
       
-      // 5. Se llama a la función para mostrar el mensaje.
-      showMessage('¡Gracias por tu mensaje! Formulario enviado con éxito.');
-      
-      // 6. Se limpia el formulario después del envío.
-      contactForm.reset();
+      try {
+        const res = await fetch('enviar_ficha.php', { method: 'POST', body: data });
+        const result = await res.json();
+        
+        if (result.success) {
+          showMessage(result.message, 'success');
+          formFicha.reset();
+        } else {
+          showMessage(result.message, 'error');
+        }
+      } catch (err) {
+        console.error(err);
+        showMessage('Error al enviar la ficha técnica. Por favor, intenta nuevamente.', 'error');
+      }
     });
   }
 

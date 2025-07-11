@@ -23,3 +23,35 @@ body {
   /* Aplica una sombra negra con un ligero desenfoque y desplazamiento. */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
+
+/* Estilos de accesibilidad (WCAG) */
+:focus {
+    outline: 2px solid #005fcc; /* Color de alto contraste */
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Respeto por las preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
